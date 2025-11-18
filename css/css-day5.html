@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS day5</title>
+    <link rel="stylesheet" href="css-day5.css">
+
+    <style>
+        h1{
+            color: darkblue;
+            background-color: darkturquoise;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        #internal{
+            color: black;
+            
+        }
+        .intern{
+            color: blue;
+        }
+
+
+
+
+
+        .solid{
+            border: 10px solid red;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .dotted{
+            border: 6px dotted yellow;
+            margin: 20px;
+            padding: 10px;
+        }
+
+        .dashed{
+            border: 3px dashed blue;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .double{
+            border: 3px double green;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .rounded
+        {
+            border: 3px solid violet;
+            border-radius: 15px;
+            margin: 10px;
+            padding: 10px;
+
+        }
+
+        .mixed{
+            border-top: 3px dotted;
+            border-left: 5px   solid;
+            border-bottom: 3px double;
+            border-right: 3px solid;
+            border-bottom-right-radius: 15px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        
+        .div1{
+            padding-top: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- inline css example -->
+    <h2 style="background-color: chartreuse; color: gray;">INLINE CSS EXAMPLE</h2>
+    <p style="color: blue;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, alias quo facilis dicta fuga, itaque vero iste blanditiis quis amet officia, iusto consectetur aspernatur accusantium? Cupiditate blanditiis autem numquam! Expedita!</p>
+
+    <!-- external css example -->
+     <h2>EXTERNAL CSS EXAMPLE</h2>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, incidunt dolor. At voluptas similique sunt ipsam deleniti voluptates dolor quo placeat dolorum labore? Reprehenderit eum omnis vero qui blanditiis id.</p>
+     
+     <h2 id="usingID">EXTERNAL CSS USING ID</h2>
+     <p id="pID">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, exercitationem voluptas! Enim voluptatem esse quisquam corporis! Modi harum nemo consectetur, facilis sit veritatis qui, doloribus laudantium tempore optio nobis mollitia.</p>
+     
+     
+     <h2 class="usingCLASS">EXTERNAL CSS USING CLASS</h2>
+     <p class="pCLASS">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet assumenda eius, veniam fuga harum ipsa dignissimos enim ut illum laboriosam impedit provident saepe aspernatur labore porro. Doloremque ipsum alias deserunt.</p>
+    
+    <!-- internal css expmle -->
+    <h1>INTERNAL CSS EXAMPLE</h1>
+    <!-- using id -->
+    <p id="internal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, nisi vero vel et dolorum nihil error sint cumque, labore quas, qui architecto repudiandae sapiente? Itaque saepe reprehenderit ipsam sunt id?</p>
+    <!-- using class -->
+    <p class="intern">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur incidunt consectetur iusto fugiat iure doloremque repellendus magni assumenda ea recusandae et officia, porro illo veritatis reprehenderit cupiditate fugit maiores.</p>
+    <div class="div1">
+    <!-- borders in css -->
+     <h3>BORDERS IN CSS</h3>
+     <p class="solid">this paragraph is solid</p>
+     <p class="dotted">this paragraph is dotted</p>
+     <p class="dashed">this paragraph is dashed</p>
+     <p class="double">this paragraph is double</p>
+     <p class="rounded">this paragraph is rounded</p>
+     <p class="mixed">this paragraph is mixed</p>
+     </div>
+
+     <!-- box models in css -->
+    <h1 class="box">BOX MODEL DEMO</h1>
+    <div class="boxmodel">this is a box model</div>
+
+
+    
+    </body>
+</html>

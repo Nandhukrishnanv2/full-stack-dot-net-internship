@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(css/charity2.jpg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        .complete-nav{
+            background-color: black;
+            width: 100%;
+            position: fixed;
+            top: 0%;
+            color: aliceblue;
+        }
+
+        ul{
+            margin: 0px 20px;
+            display: flex;
+            list-style: none;
+            justify-content: center;   
+        }
+
+        li{
+            font-size: small;
+            padding-top: 2%;
+            padding-left: 2%;
+        }
+
+        a{
+            text-decoration: none;
+            color: aliceblue;
+            font-family: 'Lucida Sans', sans-serif;
+            font-weight: bold;
+            transition: 0.8s;
+        }
+
+        a:hover{
+            color: orangered;
+        }
+
+        .charity{
+            margin-right: 40%;
+            font-weight: bolder;
+            font-size:150%;
+            font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+        }
+
+        .bt1{
+            color: white;
+            background-color: rgb(255, 196, 0);
+            padding: 5px 15px;
+            border-radius: 1vh;
+        }
+
+        .donate,h1{
+            margin-top: 100px;
+            margin-right: 70%;
+            margin-left: 20%;
+            color: aliceblue;
+            font-size: 280%;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .donate,p{
+            color: aliceblue;
+            font-size: 100%;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-left: 10px;
+            padding-left: 60px;
+        }
+
+        .btn2,button{
+            color:white;
+            background-color: orange;
+            padding: 10px 20px;
+            margin-left: 23%;
+            border: 1px;
+        }
+
+        .btn2,button:hover{
+            color: black;
+            background-color: rgb(253, 177, 34);
+        }
+        .table{
+            display: flex;
+        }
+
+        .table,table{
+            background-color: orange;
+            margin-left: 120%; 
+            text-align: center;            
+            padding-right: 100%;
+            table-layout: fixed;
+            display: flex;
+            
+        }
+        .table,table,th{
+            text-align: left;
+            table-layout: fixed;
+            margin-left: 120%;
+            padding-right: 60%;
+        }
+
+        .table,table,td{
+            padding-top: 0%;
+            padding-bottom: 0%;
+            justify-content: left;
+        }
+        
+        img{
+            text-align: left;
+            width: 30px;
+            height: 30px;
+        }
+
+        .card, .card2, .card3{
+            background-color: wheat;
+            text-align: center;
+            width: 250px;
+            padding: 100px;
+        }
+
+        .img1{
+            width: 250px;
+            height: 150px;
+        }
+
+        /* ⭐ FLEX ONLY FOR LAST 3 CARDS */
+        .all-card {
+            display: flex;
+            gap: 0px;
+            justify-content: center;
+            margin-top: 0px;
+            margin-left: 180%;
+        }
+        
+        
+       
+    </style>
+</head>
+
+<body>
+<nav class="complete-nav">
+<ul>
+    <h3 class="charity">CHARITY.</h3>
+    <li><a href="#">home</a></li>
+    <li><a href="#">services</a></li>
+    <li><a href="#">donations</a></li>
+    <li><a href="#">careers</a></li>
+    <li><a href="#">about us</a></li>
+    <li><button class="bt1">login</button></li>
+</ul>
+</nav>
+
+<div class="donate">
+<h1>DONATE</h1>
+<p>Together we can make defference</p>
+<button>Donate Now</button>
+
+<br><br>
+
+<div class="table">
+    <table>
+        <tr cellpadding="3"><th></th>
+            <th><img src="css/wallet.png" alt=""></th>
+            <th style="color: black;">GIVE DONATION</th>
+            <th></th>
+            <th><img src="css/heart.png" alt=""></th>
+            <th style="color: black;">BECOME VOLUNTEER</th>
+            <th></th>
+            <th><img src="css/graduation-cap.png" alt=""></th>
+            <th style="color: black;">GIVE SCHOLARSHIP</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td style="font-size: small;">give your valuable donations those who needs <a href="#">lern more</a></td>
+            <td></td>
+            <td></td>
+            <td style="font-size: small;">become a volenteer for those who need support <a href="#">lern more</a></td>
+            <td></td>
+            <td></td>
+            <td style="font-size: small;">give scholarships to those who need the support to study <a href="#">lern more</a></td>
+        </tr>
+    </table>
+</div>
+    
+
+<!-- ⭐ ONLY THESE 3 ARE FLEX NOW -->
+<div class="all-card">
+    <div class="card">
+        <img class="img1" src="css/charity.jpeg" alt="">
+    </div>
+    <div class="card2">
+        <img class="img1" src="css/charity1.jpg" alt="">
+    </div>
+    <div class="card3">
+        <img class="img1" src="css/charity2.jpg" alt="">
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>

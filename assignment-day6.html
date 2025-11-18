@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        body {
+            background-image: url('css/arcane.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 50px auto;
+            padding: 20px 40px;
+            width: 70%;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        } 
+
+        h1 {
+            
+            color: rgb(255, 255, 255);
+            text-align: center;
+            background-attachment: fixed;
+        }
+
+        table {
+            
+            width: 110%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        .left-label {
+            text-align: right;
+            width: 40%;
+            vertical-align: top;
+            font-weight:lighter;
+        }
+
+        .button {
+            background-color: rgb(0, 195, 255);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            background-color: rgb(0, 160, 210);
+        }
+
+        label.lets {
+            display: block;
+            text-align: left;
+            font-size: 18px;
+            margin-bottom: 15px;
+            
+        }
+
+        textarea {
+            width: 80%;
+            height: 80px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding: 8px;
+            resize: none;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select {
+            width: 80%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .lets{
+            margin-left: 37%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>SURVEY FORM</h1>
+
+    <form action="submit">
+        <label for="" class="lets" >Let us know how we can improve</label>
+        <table>
+            <tr>
+                <td class="left-label">Name</td>
+                <td><input type="text" required placeholder="Name"></td>
+            </tr>
+
+            <tr>
+                <td class="left-label">Email</td>
+                <td><input type="email" required placeholder="email"></td>
+            </tr>
+
+            <tr>
+                <td class="left-label">Age</td>
+                <td><input type="number" required placeholder="Age"></td>
+            </tr>
+
+            <tr>
+                <td class="left-label">Upload File</td>
+                <td><input type="file" class="file"></td>
+            </tr>
+
+            <tr>
+                <td class="left-label">Which option best describes your current role</td>
+                <td>
+                    <select name="Role">
+                        <option value="">Select</option>
+                        <option value="Student">Student</option>
+                        <option value="Fresher">Fresher</option>
+                        <option value="Intern">Intern</option>
+                        <option value="Employee">Employee</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="left-label">How likely are you to recommend this program to a friend?</td>
+                <td>
+                    <label><input type="checkbox"> Definitely</label><br>
+                    <label><input type="checkbox"> Maybe</label><br>
+                    <label><input type="checkbox"> Not Sure</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="left-label">What do you like most here?</td>
+                <td>
+                    <select>
+                        <option value="">Select</option>
+                        <option value="Class">Class</option>
+                        <option value="Placements">Placements</option>
+                        <option value="Activities">Activities</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="left-label">Things that should be improved in the future<br>(check all that apply)</td>
+                <td>
+                    <label><input type="checkbox"> Front-end</label><br>
+                    <label><input type="checkbox"> Back-end</label><br>
+                    <label><input type="checkbox"> Data Visualization</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="left-label">Any comments or suggestions</td>
+                <td><textarea placeholder="Give your suggestions"></textarea></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" value="Submit" class="button">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

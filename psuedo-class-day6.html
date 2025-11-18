@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:hover{
+            color: aqua;
+            text-decoration: underline;
+        }
+        input:focus{
+            border: 2px solid green;
+            outline: none;
+        }
+        li:first-child{
+            color: blueviolet;
+        }
+        li:last-child{
+            color: blue;
+        }
+        a:active{
+            color: chartreuse ;
+        }
+
+        .intro::first-letter{
+            color: darkred;
+            font-size: 30px;
+            font-weight: bolder;
+        }
+        .intro::first-line{
+            color: rgb(12, 0, 119);
+            font-style: oblique;
+        }
+        .box::before{
+            content: "START ";
+            color: rgb(212, 0, 255);
+        }
+        .box::after{
+            content: " END";
+            color: blue;
+        }
+        ::selection{
+            background-color: crimson;
+            color: black;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>PSEUDO CLASS</h1>
+    <a href="#">hover over this link</a>
+    <input type="text" placeholder="enter the details">
+    <br><br>
+
+    <a href="https://chatgpt.com/c/">hay GPT</a>
+
+    <ul><li>apple</li>
+        <li>banana</li>
+        <li>mango</li>
+    </ul>
+
+    <h1 class="pse-elem">THIS IS PSEUDO ELEMENTS</h1>
+    <p class="intro">This is a paragraph for showing psuedo elements Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor ratione dolores tempore minus beatae, unde dicta at nemo doloremque ullam veniam, saepe officia vel! Id voluptatem magni modi aliquid?</p>
+    <div class="box">this is a box element</div>
+</body>
+</html>
