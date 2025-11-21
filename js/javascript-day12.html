@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // admin login
+        // let username=prompt("enter username: ");
+        // let password=prompt("enter password: ");
+        // if(username=="admin"){
+        //     if(password=="1234"){
+        //         document.writeln("login successfull");
+        //     }
+        //     else
+        //     {
+        //         document.writeln("wrong password");
+        //     }
+        // }
+        // else{
+        //    document.writeln("invalid username");
+        // }
+
+
+        // sum of 2 numbers
+
+        // let x=Number(prompt("enter first value: "));
+        // let y=Number(prompt("enter second value:"));
+        // let s = x+y;
+        // document.writeln("sum = ",s);
+
+
+        // temperature
+
+        // let temp=Number(prompt("enter temperature"));
+        // if(temp>=40){
+        //     document.writeln("very hot");
+        // }
+        // else if(temp>=30){
+        //     document.writeln("hot");
+        // }
+        // else if(temp>=20){
+        //     document.writeln("normal");
+        // }
+        // else if(temp>=10){
+        //     document.writeln("cold");
+        // }
+        // else{
+        //     document.writeln("very cold");
+        // }
+
+        // discount
+
+        // let price = Number(prompt("enter the price: "));
+        // let amt;
+        // if(price>=500){
+        //     if(price>=1000){
+        //         amt=price-(price*0.2);
+        //         document.writeln("discount price=",amt);
+        //     }
+        //     else{
+        //         amt=price-(price*0.1);
+        //         document.writeln("discount price= ",amt);
+        //     }
+        // }
+        // else{
+        //     document.writeln("no discount; pay: ",price);
+        //     }
+
+
+        // check alphabet
+        // let a=prompt("enter a charecter: ");
+        // if(a>="a" && a<="z" || a>="A" && a<="Z"){
+        //     if(a>="a" && a<="z"){
+        //         document.writeln("lower case");
+        //     }
+        //     else{
+        //         document.writeln("upper case");
+        //     }
+        // }
+        // else{
+        //     document.writeln("not an alphabet");
+        // }
+
+        // balance withdrawal
+
+        let bal=15200;
+        let min = 100;
+        let w=Number(prompt("withdrawal amount"));
+        if(bal%100==0){
+            if(w<=bal){
+                document.writeln("successfully withdrawed");
+            }
+            else{
+                document.writeln("dont withdrawed")
+            }
+        }
+        else{
+            document.writeln("enter a multiple of 100");
+        }
+    </script>
+</body>
+</html>
