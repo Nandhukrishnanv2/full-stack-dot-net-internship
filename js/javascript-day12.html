@@ -86,20 +86,60 @@
 
         // balance withdrawal
 
-        let bal=15200;
-        let min = 100;
-        let w=Number(prompt("withdrawal amount"));
-        if(bal%100==0){
-            if(w<=bal){
-                document.writeln("successfully withdrawed");
-            }
-            else{
-                document.writeln("dont withdrawed")
-            }
-        }
-        else{
-            document.writeln("enter a multiple of 100");
-        }
-    </script>
+        // let bal=15200;
+        // let min = 100;
+        // let w=Number(prompt("withdrawal amount"));
+        // if(bal%100==0){
+        //     if(w<=bal){
+        //         document.writeln("successfully withdrawed");
+        //     }
+        //     else{
+        //         document.writeln("dont withdrawed")
+        //     }
+        // }
+        // else{
+        //     document.writeln("enter a multiple of 100");
+        // }
+
+        // divicible program
+        // let n=Number(prompt("enter the number: "));
+        // if(n%3==0){
+        //     if(n%5==0){
+        //         document.writeln("the number is the multiple of 3 & 5");
+        //     }
+        //     else{
+        //         document.writeln("the number is multiple of 3");
+        //     }
+        // }
+        // else{
+        //     document.writeln("the number is not multiple of 3&5");
+        // }
+
+        // data plan
+
+        let amt=Number(prompt("enter the plan"));
+        if(amt>=199)
+    {
+        if(amt>=399)
+    {
+        document.writeln("full talk time + data pack");
+    }
+    else
+    {
+        document.writeln("data pack + 100 mins talk time");
+    }
+    }
+    else
+    {
+        if(amt>=99)
+    {
+        document.writeln("talk time only");
+    }
+    else
+    {
+        document.writeln("no plans availabe");
+    }
+    }
+            </script>
 </body>
 </html>

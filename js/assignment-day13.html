@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>assign ment day 13</p>
+    <p>question 1 - print number from 1-50</p>
+    <script>
+        for(let i=1;i<=50;i++){
+            document.writeln(i+" ");
+        }
+    </script>
+
+    <p>question 2 - print even numbers from 1-100</p>
+    <script>
+        for(let i=1;i<=100;i++){
+            if(i%2==0){
+            document.writeln(i+" ");
+            }
+        }
+    </script>
+
+
+    <p>question 3 - print odd numbers from 1-100</p>
+    <script>
+        for(let i=1;i<=100;i++){
+            if(i%2==1){
+            document.writeln(i+" ");
+            }
+        }
+    </script>
+
+    <p>question 4 - multiplication table</p>
+    <script>
+        // let n = Number(prompt("enter no "));
+        let n = 5;
+        for(let i=1;i<=10;i++){
+            document.writeln(n +"*"+ i +"="+ n*i +"<br>");
+        }
+    </script>
+
+    <p>question 5 - print in reverse  100-1</p>
+    <script>
+        for(let i=100;i>=1;i--){
+            document.writeln(i+" ");
+        }
+    </script>
+
+
+    <p>question 6 - sum of first 20 natural nos</p>
+    <script>
+        let t=0;
+        for(i=0;i<=20;i++){
+            t=t+i;
+        }
+        document.writeln("sum="+t);
+    </script>
+
+    <p>question 7 - sum of all even no 1-50</p>
+    <script>
+        let sum = 0;
+        for(i=0;i<=50;i++){
+            if(i%2==0){
+            sum=sum+i;
+            }
+        }
+        document.writeln("sum = "+sum);
+    </script>
+
+   
+    <p>question 8 - sum of all odd no 1-50</p>
+    <script>
+        let s= 0;
+        for(i=0;i<=50;i++){
+            if(i%2==1){
+            s=s+i;
+            }
+        }
+        document.writeln("sum = "+s);
+    </script>
+
+    <p>question 9 - square of number from 1-15</p>
+    <script>
+        for(i=0;i<=15;i++){
+            document.writeln(i*i+" ");
+        }
+    </script>
+
+    <p>question 10 - nos divicible by 5 in between 1-100</p>
+    <script>
+        for(i=1;i<=100;i++){
+            if(i%5==0){
+                document.writeln(i+" ");
+            }
+        }
+    </script>
+
+    <p>question 11- factorial of the given number by user</p>
+    <script>
+        // let no = Number(prompt("enter no: "));
+        let no = 5;
+        let f=1;
+        for(i=1;i<=no;i++){
+            f=f*i;
+        }
+        document.writeln("factorial= "+f);
+    </script>
+
+    <p>question 12 - nos divicible by 7 in between 1-100</p>
+    <script>
+        for(i=1;i<=100;i++){
+            if(i%7==0){
+                document.writeln(i+" ");
+            }
+        }
+    </script>
+
+    <p>question 13 - reverse the no </p>
+    <script>
+        let numb = 78;
+        let r=0;
+        for(;numb>0;numb = Math.floor(numb/10))
+    {
+        let digit = numb%10;
+        r = r*10+digit;
+        
+    }
+    document.writeln("reversed= "+r);
+    </script>
+
+    <p></p>
+
+    
+</body>
+</html>
