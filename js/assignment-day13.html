@@ -241,6 +241,35 @@
             document.writeln("<br>");
         }
     </script>
+    <p>strings</p>
+    <script>
+        let msg = "hellow fellas";
+        document.writeln(msg.length+"<br>");
+        document.writeln(msg.toUpperCase()+"<br>");
+        document.writeln(msg.toLowerCase()+"<br>");
+        // slice(start,stop)
+        document.writeln(msg.slice(1,7)+"<br>");
+        // negative slice
+        document.writeln(msg.slice(-8,)+"<br>");
+        // substring same as slice
+        document.writeln(msg.substring(0,6)+"<br>");
+        // include to check the string is include in it or not
+        document.writeln(msg.includes("fell")+"<br>");
+        document.writeln(msg.includes("ghh")+"<br>");
+        // replace for replacing words
+        document.writeln(msg.replace("fellas","friends")+"<br>");
+        // split for spliting the string
+        document.writeln(msg.split("")+"<br>");
+        // CharAt - charecter at a position
+        document.writeln(msg.charAt(5)+"<br>");
+        // index of a charecter
+        document.writeln(msg.indexOf(h)+"<br>");
+        // to trim the unwanted spaces
+        let tr = "s        kkkk   ";
+        document.writeln(tr.trim());
+
+
+    </script>
     
 </body>
 </html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ARRAY IN JS</h1>
+    <script>
+        // an array is an unordered list of values
+        // Array is a special type of object used to store multiple values in a single variable.
+        // can store any data type
+        // allow duplicates
+        let arr1=['amal',8,true,null,44,88];
+        document.writeln(arr1[1]+"<br>");
+        document.writeln(arr1.indexOf("amal")+"<br>");
+        // add and remove items in the array
+        arr1.push("org");
+        document.writeln(arr1+"<br>");
+        arr1.pop("org");
+        document.writeln(arr1+"<br>");
+        arr1.pop(2);
+        document.writeln(arr1+"<br>");
+        // in java script we cant delete the element at the specific position only the last inserted
+        arr1.pop(0);
+        document.writeln(arr1+"<br>"); 
+        // to shift positions at the 1st place
+        arr1.unshift("shejin");
+        document.writeln(arr1+"<br>");
+        // shift is used to remove first element
+        arr1.shift("shejin");
+        document.writeln(arr1+"<br>");
+
+        document.writeln(arr1.indexOf(8)+"<br>");
+
+        document.writeln(arr1.slice(1,3)+"<br>");
+        document.writeln(arr1.slice(-4,-1)+"<br>"); //negative slicing
+
+        let arr2=[1,5,8,7,9,6,88,44,55];
+        document.writeln(arr2.sort()+"<br>");//sorting based on data types (number charecter boolean etc)
+
+        
+
+    </script>
+</body>
+</html>
