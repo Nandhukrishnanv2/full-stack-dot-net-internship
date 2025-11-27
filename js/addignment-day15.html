@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>q1 count vowels in a string</p>
+    <script>
+        let w1 = "haiiamshejinjose";
+        let a1 = w1.match(/[aeiouAEIOU]/gi);
+        let count = a1.length;
+        document.writeln(count);
+    </script>
+
+    <p>q2 count consonants</p>
+    <script>
+        let conso = w1.length-count;
+        document.writeln(conso);
+    </script>
+
+    <p>q3 reverse a string using for loop</p>
+    <script>
+        let q3 = "google";
+        let rev="";
+        for(i=q3.length;i>=0;i--){
+            rev = rev+q3[i];
+        }
+        document.writeln(rev);
+    </script>
+
+    <p>q4 count how many time a charecter appears in a string</p>
+    <script>
+        let c4=0;
+        let q4 = "forloop";
+        for(i=0;i<=q4.length;i++){
+            if(q4.includes("o")){
+                c4++;
+            }}
+        document.writeln(c4);
+    </script>
+</body>
+</html>

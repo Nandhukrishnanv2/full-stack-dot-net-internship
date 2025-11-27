@@ -55,6 +55,93 @@
     </script>
 
     <p>q9- if value check its exist else return -1</p>
-    
+    <script>
+        
+        if(arr1.includes("Anu")){
+           document.writeln("-1");
+        }
+        else{
+            document.writeln("not found")
+        }
+    </script>
+
+    <p>q13- get second last element of an array</p>
+    <script>
+        let arr2 = [12,25,88,4,9,7,66,55];
+        let c = (arr2.length)-2;
+        document.writeln(arr2[c]);  
+    </script>
+
+    <p>q14- copy the array without spreading /use slice</p>
+    <script>
+        let arr3=[",tv","phone","mobile","charger"];
+        let arr4=arr3.slice(2,4);
+        document.writeln(arr3+"<br>");
+        document.writeln(arr4+"<br>");
+    </script>
+
+    <p>q15- remove the first 2 elements using slice(2)</p>
+    <script>
+        arr5 = arr3.slice(2);
+        document.writeln(arr5);
+    </script>
+
+    <p>q16- </p>
+
+
+
+
+    <p>q17- check the array contain the number</p>
+    <script>
+        let arr6 = [21,44,66,78,64];
+        
+        if(arr6.includes(01)){
+            document.writeln("included");
+        }
+        else{
+            document.writeln("not included");
+        }
+    </script>
+
+
+    <p>q18- combine 2 arrays</p>
+    <script>
+        arr7 = arr6+arr3;
+        document.writeln(arr7);
+    </script>
+
+    <p>q19 - sort numbers ascending</p>
+    <script>
+        arr6.sort((a,b)=>a-b);
+        document.writeln(arr6);
+    </script>
+
+    <p>q20 - sort number deccending order</p>
+    <script>
+        arr6.sort((a,b)=>b-a);
+        document.writeln(arr6);
+    </script>
+
+    <p>q21 - get only last 3 numbers in the array</p>
+    <script>
+        document.writeln(arr6.slice(-3));
+    </script>
+
+    <p>q22 - duplicate an array 3 times</p>
+    <script>
+        let arr7 = [...arr6,...arr6,...arr6];
+        document.writeln(arr7);
+    </script>
+
+    <p>q23 - flatten an array 1 level</p>
+    <script>
+        arr7.flat(3);
+        document.writeln(arr7);
+    </script>
+    <p>q24- get first 3 and last 3 items and merge</p>
+    <script>
+        
+    </script>
+
 </body>
 </html>
