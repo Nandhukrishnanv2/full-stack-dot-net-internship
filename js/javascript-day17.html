@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>set in js</h2>
+    <script>
+        let n = new Set([1,2,3,4,5,6,7,8]);
+        document.writeln(...n);
+    </script>
+
+
+
+    <p>adding values using method add</p>
+    <script>
+        let fruits = new Set([]);
+        fruits.add("apple");
+        fruits.add("orenge");
+        fruits.add("banana");
+        fruits.add("grapes");
+        
+        
+        document.writeln([...fruits]);
+
+        document.writeln("<br><p>size of the set is </p>");
+        document.writeln(fruits.size);
+
+        document.writeln("<p> to delete an item from the set</p><br>");
+        fruits.delete("apple");
+        document.writeln([...fruits]);
+
+        document.writeln("<br>to clear set<br>");
+        fruits.clear();
+        document.writeln(" fruite: "+[...fruits]);
+
+        document.writeln("<br><p>checking the value</p><br>");
+        document.writeln(n.has(4)+"<br>");
+        document.writeln(n.has(9));
+
+    </script>
+
+    <h2>Object in js</h2>
+    <script>
+        let myObj = {
+            name : "shejin",
+            age : 22,
+            status: "single",
+            1: "non binary" 
+        };
+        document.writeln("name:"+myObj.name+"<br>");
+        document.writeln("age:"+myObj.age+"<br>");
+        document.writeln("status:"+myObj.status+"<br>");
+        document.writeln("gender:"+myObj[1]+"<br>");
+
+        document.writeln("<p>to check the key is exist</p><br>");
+        document.writeln(("name" in myObj)+"<br>");
+        document.writeln(("nam" in myObj)+"<br>");
+
+        document.writeln("<p>to find the keys in the object</p><br>");
+        document.writeln(Object.keys(myObj));
+
+       
+    </script>
+    
+    <p>fetching values from an object</p>
+    <script>
+        let person={
+            name:"omkar",
+            age:23,
+            place:"maharashtra"
+        };
+
+        document.writeln(person.name+"<br>");
+        document.writeln(person.age+"<br>");
+        document.writeln(person.place+"<br>");
+    </script>
+
+
+<p>for loop used in object</p>
+<!-- for(variable in object){
+        body
+        }       -->
+    <script>
+        let user = {
+            name : "jithin",
+            age : 23,
+            city : "meenadom"
+        };
+
+        for(let key in user){
+            document.writeln(key);
+            document.writeln(user[key]+"<br>");
+        }
+    </script>
+<p>object in an object</p>
+    <script>
+        let p = {
+            name: "shejin",
+            age:23,
+            address:{city:"anikkadu",spouse:"chottu"}
+        };
+
+        for(let i in p){
+            if(typeof p[i]==="object"){
+                for(let subkey in p[i]){
+                    document.writeln(subkey +": "+p[i][subkey]+ "<br>");
+                }
+            
+            }
+            else{
+                document.writeln(i +": "+p[i]+"<br>");
+            }
+        }
+    </script>
+    
+    <!-- for loop defenition
+     work on interables: arrays strings sets,etc;
+     does not work directly on plain objects
+     provides values, not keys
+     
+     for(variable of iterable){
+     code
+     }-->
+
+     <p>example for for loop</p>
+     <script>
+        let num = [10,250,36];
+        for(let i of num){
+            document.writeln(i+"<br>");
+        }
+
+        let nam = "javascript";
+        for(let i of nam){
+            document.writeln(i+"<br>");
+        }
+
+        let colors =new Set(["red","blue","green"]);
+        for(let i of colors){
+            document.writeln(i+"<br>");
+        }
+     </script>
+
+     <p>for each </p>
+     <!-- forEach(): is a build in method 
+            used to loop through array,sets
+            it run a function for every element in the collection.
+            
+            array.forEach(fuction(item,index,array){
+                code//
+            });-->
+     <script>
+        let number = [10,58,7,8,66];
+        number.forEach(function(i,index,arr){
+            document.writeln("values: "+i+
+                            " index: "+index+
+                            " full Array: "+arr+"<br>"
+            );
+        });
+     </script>
+</body>
+</html>
