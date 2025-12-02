@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>/////// for in problems///////</p>
+    <p>question 1</p>
+    <script>
+     const person={name:"Alice",Age:25,city:"paris"}
+     for(let i in person){
+        document.writeln(i);
+        document.writeln(": "+person[i]+"<br>");
+     }
+    </script>
+    <p>question 2</p>
+    <script>
+        const colors=["red","green","blue"];
+        for(let i in colors){
+            document.writeln(i);
+            document.writeln(": "+colors[i]+"<br>");
+        }
+    </script>
+    <p>question 3</p>
+    <script>
+        const c={name:"shejin",age:21,maritalstatus:"single"};
+        let count = 0;
+        for(let i in c){
+        count++;    
+        }
+        document.writeln(count);
+    </script>
+
+    <p>question 4</p>
+    <script>
+        const student={name:"john",grade:10,mark:85};
+        let n = 0;
+        for(i in student){
+            document.writeln(i);
+            document.writeln(": "+student[i]+"<br>");
+            if(typeof student[i]=="number"){
+                n++
+            }
+            
+        }document.writeln("<br>"+n);
+    </script>
+
+    <p>question 5</p>
+    <script>
+        const students={alice:85,jithin:87,omku:78,shejin:99};
+        let total = 0;
+        for(let i in students){
+            total =total + students[i];
+        }
+        document.writeln("total = "+total);
+    </script>
+<p>////// for of problems //////</p>
+    <p>question 1</p>
+    <script>
+        const fruit = ["apple","banana","cherry"];
+        for(i of fruit){
+            document.writeln(i+"<br>");
+        }
+    </script>
+
+    <p>question 2</p>
+    <script>
+        let name="shejin shejin";
+        for(let i of name){
+            document.writeln("<br>"+i);
+        }
+    </script>
+    <p>question 3</p>
+    <script>
+        const s = [66,34,77,23,88,12,5,88,6,1,5,20,2,6,8];
+        let v = 0;
+        for(let i of s){
+            v=v+i;
+        }
+        document.writeln("sum : "+v);
+    </script>
+
+    <p>question 4</p>
+    <script>
+        for(let i of s){
+            if(i>10){
+                document.writeln(i+"  ");
+            }
+        }
+    </script>
+
+    <p>question 5</p>
+    <script>
+        let nam="omkar sivaji survey";
+        let vow=0;
+        for(let i of nam){
+            if(["a","e","i","o","u","A","E","I","O","U"].includes(i)){
+                vow=vow+1;
+            }
+        }document.writeln("count: "+vow);
+    </script>
+
+
+    <p>question 6</p>
+    <script>
+        let max=0;
+        let min=Infinity;
+        for(i of s){
+            if(i<min){
+               min=i;
+            }
+            if(i>max){
+                max=i;
+            }
+        }document.writeln("maximum : "+max+"<br>");
+        document.writeln("minimum :"+min);
+    </script>
+
+    <p>question 7 </p>
+    <script>
+        const conc=["shejin","josss","chottu"];
+        let shejin="";
+        for(let i of conc){
+            shejin = shejin+i;
+                
+        }document.writeln(shejin);
+    </script>
+
+    <p>/////// for each loop problems ////////</p>
+    <p>question 1</p>
+    <script>
+        s.forEach(function(i){
+            document.writeln(i);
+
+        });
+    </script>
+
+    <p>question 2</p>
+    <script>
+        let a1 = ["1","10","2","5"];
+        let a2 = [];
+        let sq = 0;
+        a1.forEach(function(i,index){
+            sq=i*i;
+            a2[index]=sq;
+
+        });
+        document.writeln(a2);
+    </script>
+
+    <p>question 3</p>
+    <script>
+        a1.forEach(function(i,index){
+            document.writeln("index: "+index+", value:"+i+"<br>");
+        });
+    </script>
+
+    <p>question 4</p>
+    <script>
+        a1.forEach(function(i){
+            if(i%2!=0){
+                document.writeln(i+"<br>");
+            }
+        })
+    </script>
+
+    <p>question 5</p>
+    <script>
+        a1.forEach(function(i){
+            if(i%2==0){
+                document.writeln(i+"<br>");
+            }
+        })
+    </script>
+
+    <p>question 6</p>
+    <script>
+        const a3=[1,2,3,5,"shejin","jithin","omku",5,8,9,7];
+        count=0;
+        a3.forEach(function(i){
+            if(typeof i=="string"){
+                count++;
+            }
+        });
+        document.writeln("count : "+count); 
+    </script>
+
+    
+</body>
+</html>
