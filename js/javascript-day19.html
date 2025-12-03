@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>FUCTION IN JS</p>
+    <p>function is a block of code that can be reusable and to perform a particular task.</p>
+    <script>
+        function hello(){
+            document.writeln("hellow javascript");
+        }
+        hello();
+    </script>
+    <p>//////// using return /////////</p>
+        <script>
+        function hellow(){
+            return "hellow script";
+        }
+        document.writeln(hellow());
+    </script>
+    <script>
+        let radius = 5;
+        function pi(){
+            return 3.14;
+        }
+        document.writeln("<br>Radius : "+pi()*radius*radius);
+    </script>
+    <p>//////////// adding parameters ////////////</p>
+    <script>
+        function washingmech(cloths){
+            document.writeln("washing ",cloths+"<br>");
+        }
+        washingmech("shirt");
+        washingmech("jeans");
+    </script>
+    <script>
+        function add(a,b){
+            return a+b;
+        }
+        document.writeln(add(8,9));
+    </script>
+    <p>print even numbers</p>
+    <script>
+        function printeven(n){
+            for(let i=1;i<=n;i++){
+                if(i%2==0){
+                    document.writeln("<br>"+i+" ");
+                }
+            }
+        }
+        printeven(18);
+    </script>
+    <p>///////////// function expression ////////////</p>
+    <script>
+        let multiply = function(a,b){
+            return a*b;
+        };
+        document.writeln("multiplication : ",multiply(5,8));    
+    </script>
+    <p>//////////// Arrow function ////////////</p>
+    <script>
+        let greet = ()=>{
+            document.writeln("hellow....");
+        }
+        greet();
+    </script>
+    <br>
+    <script>
+        let adds = (c,d)=>c+d;
+        document.writeln("arrow add = ",adds(10,8)+"<br>");
+
+        let mul = (c,d)=>c*d;
+        document.writeln("arrow multiplication = ",mul(15,8)+"<br>");
+    </script>
+    <br>
+
+    <p>/////////// ternary operator //////////// 
+    <br>? symbol in your code is called the ternarry operator in JS
+    <br>condition ? value_if_true : value_if_false
+    </p>
+
+    <script>
+        let checknum=(num) => num>0 ? "positive" : num<0 ? "negative" : "zero";
+        document.writeln(checknum(8),"<br>");
+        document.writeln(checknum(-4),"<br>");
+        document.writeln(checknum(0),"<br>");
+    </script>
+
+    <p>||||||||||||||odd or even|||||||||||||||</p>
+    <script>
+        let checknumber=(n)=> n%2==0 ? "even" : "odd";
+        document.writeln(checknumber(8),"<br>");
+        document.writeln(checknumber(7),"<br>");
+        document.writeln(checknumber(0),"<br>");
+    </script>
+
+    <p>///////////// default parameter function /////////////</p>
+    <script>
+        function greets(name = "guest"){
+            document.writeln("hellow "+name+"<br>");
+        }
+        greets();
+        greets("arun");
+    </script>
+    <p></p>
+    <script>
+        function sums(e,f){
+            return e+f;
+        }
+        function display(){
+            let result= sums(5,8);
+            document.writeln("sum = "+result);
+        }
+    </script>
+    <p>////////////// global variable /////////////</p>
+    <script>
+        let globalvar = "i am global variable";
+        function test(){
+            document.writeln(globalvar,"  -inside the function<br>");
+        }
+        test();
+        document.writeln(globalvar,"   -outside the function<br>");
+    </script>
+    <p>/////////////// local variable /////////////</p>
+    <script>
+        function test1(){
+            let loc = "i am a local variable";
+            document.writeln(loc," inside function <br>");
+
+        }
+        test1();
+        document.writeln(loc);
+    </script>
+    
+</body>
+</html>
