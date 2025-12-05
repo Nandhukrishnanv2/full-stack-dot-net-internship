@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment day 19</title>
+    
+</head>
+<body>
+    <p>question 1 bill and tax</p>
+
+    <script>
+     function bill(){
+        // let amount = Number(prompt("enter the amount"));
+        let amount = 50;
+        let add = amount*0.05;
+        let bill = amount+add;
+        return bill;
+        }
+        document.writeln("toyal bill : "+bill());
+    </script>
+
+
+    <p>question 2 generate username</p>
+    <script>
+        // function generateUsername(name,year){
+        //     let newname = name.slice(0,3);
+        //     let newyear = year.slice(-2);
+        //     let nam = newname+newyear;
+        //     document.writeln(nam);
+        // }
+        // let n = String(prompt("enter user name"))
+        // let y = String(prompt("enter birth year"))
+        // generateUsername(n,y);
+    </script>
+
+    <p>question 3 price and discount</p>
+    <script>
+        function discountPrice(price,discount)
+        {
+        let sub = price*discount;
+        let bill1 = price-sub;  
+        document.writeln(bill1); 
+        }
+        discountPrice(1500,0.2);
+        
+    </script>
+
+    <p>question 4 delivery charge</p>
+    <script>
+        function deliveryCharge(distance){
+            if(distance>0){
+            if(distance<5){
+                document.writeln("free delivery");
+            }
+            else if(distance<=10){
+                document.writeln("delivery charge : 20$");
+            }
+            else{
+                document.writeln("delivery charge : 50$");
+            }
+        }
+        else{
+            document.writeln("invalid distance");
+        }
+        }
+        deliveryCharge(0);
+    </script>
+
+    <p>question 5 student grade</p>
+    <script>
+        function gradeStudent(mark){
+            if(mark>=0 && mark<=100){
+                if(mark>=80){
+                    document.writeln("A");
+                }
+                else if(mark>=70){
+                    document.writeln("B");
+                }
+                else if(mark>=60){
+                    document.writeln("C");
+                }
+                else{
+                    document.writeln("failed!!");
+                }
+            }
+            else{
+                document.writeln("invalid mark!!");
+            }
+        }
+        gradeStudent(75);
+    </script>
+    
+</body>
+</html>
