@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>REGULAR EXPRESSION</h1>
+    <p>name validation</p>
+    <script>
+        // let name=prompt("enter the name");
+        let name="Nandhu";
+        let pattern = /^[A-Z][a-zA-Z]{1,30}$/;
+
+        if(pattern.test(name)){
+            document.writeln("valid name");
+        }
+        else{
+            document.writeln("invalid name");
+        }
+    </script>
+    <p>mobile number validation</p>
+    <script>
+        // let number = prompt("enter mobile number");
+        let number = 9854653214;    
+        let pattern1 = /^(?:\+91)?[6789]\d{9}$/;
+
+        if(pattern1.test(number)){
+            document.writeln("valid mobile number");
+        }
+        else{
+            document.writeln("invalid mobile number");
+        }
+    </script>
+    <p>email validations</p>
+    <script>
+        // let email = prompt("enter the mail id");
+        let email = "nandhu@gmail.com";
+        let pattern2 = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA_Z]{2,}$/;
+        if(pattern2.test(email)){
+            document.writeln("valid email id");
+        }
+        else{
+            document.writeln("invalid email id");      
+        }
+    </script>
+    
+</body>
+</html>

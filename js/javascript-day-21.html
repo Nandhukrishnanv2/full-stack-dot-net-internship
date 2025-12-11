@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>get element by tag name </p>
+
+    <h2>Hellow Shejin</h2>
+    <h2>Hellow Shejin</h2>
+    <h2>Hellow Shejin</h2>
+    <h2>Hellow Shejin</h2>
+    <h2>Hellow Jithin</h2>
+
+
+    <script>
+        // document.getElementsByTagName("h2")[0].style.color = "blue";
+
+        let head = document.getElementsByTagName("h2");
+        for(let h of head){
+            h.style.color="red";
+        }
+    </script>
+
+    <p>get element by class name</p>
+    <h2 class="omku">hellow omku</h2>
+
+    <h2 class="om">hellow omkar</h2>
+    <h2 class="om">hellow omkar</h2>
+    <h2 class="om">hellow omkar</h2>
+
+    
+    <script>
+        document.getElementsByClassName("omku")[0].style.color="blue";
+        document.getElementsByClassName("omku")[1].style.color="green";   
+    </script>
+
+    
+    <script>
+        let t = document.getElementsByClassName("om");
+        for(let i=0;i<t.length;i++){
+            t[i].style.fontWeight="bold";
+            t[i].style.color="gray";
+        }
+    </script>
+
+    <p>onclick pointer</p>
+    <h1 id="head2">Hellow There</h1>
+    <h2 id="head2" onclick="changetext()">click here!</h2>
+    <script>
+        function changetext(){
+            let h = document.getElementById("head2");
+            h.innerHTML="Welcome To Javascript";
+            h.style.color="green";
+        }
+    </script>
+    <p>joining the string in a sentence</p>
+    <script>
+        let  name = "shejin";
+        let age = 22;
+        document.writeln(`my name is ${name} and i am ${age} year old`);    
+
+    </script>
+</body>
+</html>
