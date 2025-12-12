@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+    <style>
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>registration form</h2>
+    <form onsubmit="return validationForm()">
+        <label for="">Name</label>
+        <input type="text" name="" id="name"><br>
+        <span id="nameError" class="error"></span><br><br>
+        <label for="">email</label>
+        <input type="text" name="" id="email"><br>
+        <span id="emailError" class="error"></span><br><br>
+        <label for="">mobile</label>
+        <input type="text" name="" id="mobile"><br>
+        <span id="mobileError" class="error"></span><br><br>
+        <label for="">password</label>
+        <input type="password" name="" id="password"><br>
+        <span id="passError" class="error"></span><br><br>
+        <label for="">confirm password</label>
+        <input type="password" name="" id="confirm"><br>
+        <span id="confirmError" class="error"></span><br><br>
+        <input type="submit" name="submit" id="submit">
+    </form>
+
+    <script>
+        function validationForm(){
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let mobile = document.getElementById("mobile").value;
+            let password = document.getElementById("password").value;
+            let confirm = document.getElementById("confirm").value;
+
+
+            document.getElementById("nameError").innerHTML="";
+            document.getElementById("emailError").innerHTML="";
+            document.getElementById("mobileError").innerHTML="";
+            document.getElementById("passError").innerHTML="";
+            document.getElementById("confirmError").innerHTML="";
+        
+        let isValid = true;
+        // regex pattern
+        let namePattern = /^[A-Z][a-zA-Z]{1-30}$/;
+        let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        let mobilePattern = /^(?:\+91)?[6789]\{9}$/;
+        let passPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%&*?])[A-Za-z0-9!@#$%&*?]{6,}$/;
+
+        if(namePattern.test(name)){
+            document.getElementById("nameError").innerHTML = "invalid name";
+            isValid = false;
+        }
+        if(emailPattern.test(emaol)){
+            document.getElementById("emailError").innerHTML = "invalid email";
+            isValid = false;
+        }
+        if(mobilePattern.test(mobile)){
+            document.getElementById("mobileError").innerHTML = "invalid mobile number";
+            isValid = false;
+        }
+        if(passPattern.test(password)){
+            document.getElementById("passError").innerHTML = "password is not strong";
+            isValid = false;
+        }
+        if(password!=confirm){
+            document.getElementById("confirmError").innerHTML = "incorrect password";
+            isValid = false;
+        }
+        return isValid;
+    }
+        
+
+
+    </script>
+</body>
+</html>

@@ -1,7 +1,8 @@
-let x = document.getElementById("");
-let y = document.getElementById("");
-let operation = document.getElementById("c");
-console.log(operation)
+let current = 0;
+let x = document.getElementsByClassName("btn operator");
+let y = document.getElementById("btn operator");
+let operation = document.getElementsByClassName("btn operator");
+
 switch(operation){
     case "+":
         let sum = x+y;
@@ -11,4 +12,15 @@ switch(operation){
         let div = x/y;
     case "*":
         let mul = x*y;
+    default:
 }
+
+function updateDisplay() {
+    display.textContent = currentInput;
+}
+
+function clearall(){
+    document.getElementById("clear").addEventListener("click", clearAll);
+}
+
+function equalto(){}

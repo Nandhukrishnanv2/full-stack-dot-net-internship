@@ -3,42 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>claculator</title>
-<link rel="stylesheet" href="/css/calculator.css">
-<style></style>
+    <title>clac</title>
+    <style>
+        #display{
+            width: 210px;
+            height: 50px;
+            background-color: rgb(199, 209, 105);
+            border-radius: 5px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bolder;
+            align-content: center;
+            padding-left: 5px;
+             
+        }
+        button{
+            width: 50px;
+            height: 50px;
+            border: 0px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            background-color: rgb(0, 166, 207);
+        }
+        .clear{
+            background-color: rgb(184, 1, 1);
+            }
+        .op{
+            background-color: orange;
+        }
+        .eq{
+            background-color: rgba(0, 199, 0, 0.774);
+        }
+        .clear:hover{
+            background-color: rgb(255, 115, 115);
+        }
+        .op:hover{
+            background-color: rgb(255, 204, 108);
+        }
+        .eq:hover{
+            background-color: rgb(205, 255, 131);
+        }
+        button:hover{
+            background-color: rgba(117, 255, 248, 0.986);
+        }
+
+        .box{
+            background-color: rgb(224, 230, 230);
+            justify-content: first baseline;
+            border-radius: 10px;
+            
+            padding-left:15px;
+            padding-right: 15px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin-top: 10%;
+            margin-left: 40%;
+            margin-right: 44.5%;
+            
+
+        }
+        body{
+            background-color: rgb(54, 54, 54);
+        }
+    </style>
 </head>
 <body>
-    <form action="">
-    <table>
-        <tr>
-        <th colspan="4"></th>
-        </tr>
-        <tr>
-            <td><button id="c">C</button></td>
-            <td><button id="/">/</button></td>
-            <td><button id="*">*</button></td>
-            <td><button id="-">-</button></td>
-        </tr>
-        <tr>
-            <td><button id="7">7</button></td>
-            <td><button id="8">8</button></td>
-            <td><button id="9">9</button></td>
-            <td><button id="+">+</button></td>
-        </tr>
-        <tr>
-            <td><button id="4">4</button></td>
-            <td><button id="5">5</button></td>
-            <td><button id="6">6</button></td>
-            <td><button id="=">=</button></td>
-        </tr>
-        <tr>
-            <td><button id="1">1</button></td>
-            <td><button id="2">2</button></td>
-            <td><button id="3">3</button></td>
-            <td><button id="0">0</button></td>
-        </tr>
-    </table>
+    <div class="box">
+    <div id="display"></div><br>
+    <div>
+        <button class="clear" onclick="clearNum()">C</button>
+        <button class="op" value="/" onclick="operator(this.value)">/</button>
+        <button class="op" value="*" onclick="operator(this.value)">*</button>
+        <button class="op" value="-" onclick="operator(this.value)">-</button>
+    </div><br>
+    <div>
+        <button value="7" onclick="displayNum(this.value)">7</button>
+        <button value="8" onclick="displayNum(this.value)">8</button>
+        <button value="9" onclick="displayNum(this.value)">9</button>
+        <button class="op" value="+" onclick="operator(this.value)">+</button>
+    </div><br>
+    <div>
+        <button value="4" onclick="displayNum(this.value)">4</button>
+        <button value="5" onclick="displayNum(this.value)">5</button>
+        <button value="6" onclick="displayNum(this.value)">6</button>
+        <button class="eq" value="=" onclick="equalTo(this.value)">=</button>
+    </div><br>
+    <div>
+        <button value="1" onclick="displayNum(this.value)">1</button>
+        <button value="2" onclick="displayNum(this.value)">2</button>
+        <button value="3" onclick="displayNum(this.value)">3</button>
+        <button value="0" onclick="displayNum(this.value)">0</button>
+    
+    
+    </div>
+</body>
+<script>
+    let display = document.getElementById("display");
+    let num1 = "";
+    let num2 = "";
+    let op = "";
+
+
+    function displayNum(val) {
+        if(op === ""){
+            num1=num1+val;
+            display.innerText=num1;
+        }
+        else
+        {
+            num2 = num2+val;
+            display.innerText=num2;
+        }
+    }
+
+
+    function operator(value){
+        op = value;
+        display.innerText=value;
+    }
+
+
+    function equalTo() {
+    let result = 0;
+
+    if((num1.length || n2.length)>=10){
+        display.innerText="Math Error";
+    }
+    else{
+
+        if (op === "+") {
+            result = Number(num1) + Number(num2);
+            display.innerText = result;
+        }
+        else if(op==="-"){
+            result = Number(num1) - Number(num2);
+            display.innerText = result;
+        }
+        else if(op==="*"){
+            result = Number(num1) * Number(num2);
+            display.innerText = result;
+        }
+        else if(op==="/"){
+            if(Number(num2)==0){
+                display.innerText="cannot devide by zero";
+            }
+            else{
+            result = Number(num1) / Number(num2);
+            display.innerText = result;
+            }
+        }
+        else{
+            display.innerText="Math Error";
+        }
+}
+}
+
+
+function clearNum(){
+    num1 ="";
+    num2 = "";
+    op = "";
+    display.innerText = "";
+}
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="/css/calculator.css">
+</head>
+<body>
+    <form action="javascript:void(0);">  
+        <table>
+            <tr>
+                <th colspan="4" id="display">0</th>
+            </tr>
+
+            <tr>
+                <td><button type="button" class="btn" id="clear" value="C">C</button></td>
+                <td><button type="button" class="btn operator" value="/">/</td>
+                <td><button type="button" class="btn operator" value="*">*</td>
+                <td><button type="button" class="btn operator" value="-">-</td>
+            </tr>
+
+            <tr>
+                <td><button type="button" class="btn number" value="7">7</button></td>
+                <td><button type="button" class="btn number" value="8">8</button></td>
+                <td><button type="button" class="btn number" value="9">9</button></td>
+                <td><button type="button" class="btn operator" value="+">+</button></td>
+            </tr>
+
+            <tr>
+                <td><button type="button" class="btn number" value="4">4</button></td>
+                <td><button type="button" class="btn number" value="5">5</button></td>
+                <td><button type="button" class="btn number" value="6">6</button></td>
+                <td><button type="button" class="btn equal" id="equal" value="=">=</button></td>
+            </tr>
+
+            <tr>
+                <td><button type="button" class="btn number" value="1">1</button></td>
+                <td><button type="button" class="btn number" value="2">2</button></td>
+                <td><button type="button" class="btn number" value="3">3</button></td>
+                <td><button type="button" class="btn number" value="0">0</button></td>
+            </tr>
+        </table>
     </form>
+
     <script src="/javascript/calculator.js"></script>
 </body>
-</html>
+</html> -->
+
+
