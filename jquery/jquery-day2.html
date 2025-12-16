@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery day2</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+<style>
+    #box{
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        border-radius: 20px;
+        margin-top: 5%;
+        font-size: small;
+        font-weight: bolder;
+        margin-bottom: 2%;
+        
+    }
+</style>
+
+</head>
+<body>
+    <p class="para">paragraph 1</p>
+    <p class="para">paragraph 2</p>
+    <p id="unique">paragraph 3</p>
+    <script>
+        $(document).ready(function(){
+            $(".para").css("color","red");
+            $("#unique").css("font-weight","bold");
+            $("p").css("background","yellow");
+        });
+    </script>
+
+    <button id="btn">click me</button>
+    <p id="demo"></p>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("#demo").text("button clicked!");
+            });
+        });
+    </script>
+
+    <div id="box">HOVER ME</div>
+    <input type="text" id="input" placeholder="type here">
+    <p id="display"></p>
+
+    <script>
+        $(document).ready(function(){
+            // hover event 
+            $("#box").hover(
+                function(){ $(this).css("background-color","red");},
+                function(){ $(this).css("background-color","yellow");}
+        );
+
+        // key up event 
+
+        $("#input").keyup(function(){
+            $("#display").text($(this).val());
+        });
+        });
+    </script>
+
+    <button id="hide">HIDE</button>
+    <button id="show">SHOW</button>
+    <p id="para1">hai everyone</p>
+
+    <script>
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("#para1").hide();
+            });
+
+            $("#show").click(function(){
+                $("#para1").show();
+            });
+        });
+    </script>
+
+    <button id="fadeout">FADE OUT</button>
+    <button id="fadein">FADE IN</button>
+    <p id="para2">MARVELS</p>
+
+    <script>
+        $(document).ready(function(){
+            $("#fadeout").click(function(){
+                $("#para2").fadeOut("slow");
+            });
+
+            $("#fadein").click(function(){
+                $("#para2").fadeIn("fast");
+            });
+        });
+    </script>
+
+    <p id="para3">SLIDE UP & DOWN</p>
+    <button id="slideup">SLIDE UP</button>
+    <button id="slideout">SLIDE DOWN</button>
+
+    <script>
+        $(document).ready(function(){
+            $("#slideup").click(function(){
+                $("#para3").slideUp(2000);
+            });
+
+            $("#slideout").click(function(){
+                $("#para3").slideDown(2000);
+            });
+        });
+    </script>
+<br><br>
+    <button id="toggle">toggle</button>
+    <p id="para4">APPEAR & DISAPPEAR</p>
+    
+    <script>
+        $(document).ready(function(){
+            $("#toggle").click(function(){
+                $("#para4").toggle(1500);
+            });
+        });
+    </script>
+
+    <br>
+    <p id="para5">HELLOW THERE</p>
+    <button id="styles">Change me</button>
+    <script>
+        $(document).ready(function(){
+            $("#styles").click(function(){
+                $("#para5").css({
+                    "color":"white",
+                    "font-size":"20px",
+                    "background-color":"black",
+                    "font-weight":"bold"
+                });
+            });
+        });
+    </script>
+<br><br>
+
+    <button id="move">MOVE</button>
+    <div id="box1" style="width: 100px;
+                         height: 100px;
+                         background-color:rgb(0, 153, 255);
+                         position: relative;"></div>
+    <script>
+        $(document).ready(function(){
+            $("#move").click(function(){
+                $("#box1").animate({left:'250px', height:'100px',width:"1000px"},3000);
+            });
+        });
+    </script>
+
+
+</body>
+</html>
