@@ -140,6 +140,7 @@
 <br><br>
 
     <button id="move">MOVE</button>
+    <button id="moveback">MOVE BACK</button>
     <div id="box1" style="width: 100px;
                          height: 100px;
                          background-color:rgb(0, 153, 255);
@@ -148,7 +149,18 @@
         $(document).ready(function(){
             $("#move").click(function(){
                 $("#box1").animate({left:'250px', height:'100px',width:"1000px"},3000);
+                
+                                
             });
+            
+            $("#moveback").click(function(){
+                
+                $("#box1").animate({left:'0px', height:'100px',width:"100px"},3000);
+                                
+            });
+            
+                
+            
         });
     </script>
 
