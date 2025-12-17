@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax day1</title>
+    <script src="jquery.js"></script>
+</head>
+<body>
+     <center><h1>AJAX</h1>
+    <input type="text" id="search" placeholder="type here to search">
+    <div id="result">result will appear here..</div>
+    </center>
+
+    <script>
+        $(document).ready(function(){
+            $("#search").on("input", function(){
+                var keyword = $(this).val().toLowerCase();
+
+                if(keyword === ""){
+                    $("#result").html("result will appear here");
+                    return;
+                }
+
+                $.ajax({
+                    url:"data.txt",
+                    type:"GET",
+                    success: function(data){
+                        var lines = data.split("\n");
+                        var result = "";
+
+                        for(var i=0; i<lines.length; i++)
+                    {
+                        if(lines[i].toLowerCase().includes(keyword)){
+                            result+=lines[i]+"<br>";
+                        }
+                    }
+                    $("#result").html(result!== "" ? result : "no matching data found");
+                    },
+                    error: function(error){
+                        $("#result").html("error loading data");
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

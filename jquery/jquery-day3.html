@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery day 25</title>
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <p id="fadepara" style="background-color: aqua;">THIS WILL FADE 50%</p>
+    <button id="fadebtn">FADE IN</button>
+    <button id="fadebtn2">FADE OUT</button>
+
+    <script>
+        $(document).ready(function(){
+            $("#fadebtn").click(function(){
+                $("#fadepara").fadeTo(1000,0.1);
+            });
+            $("#fadebtn2").click(function(){
+                $("#fadepara").fadeTo(1000,1);
+            });
+        });
+    </script>
+
+    <div id="container">
+        <!-- <input type="text" id="inputs"> -->
+        <p>paragraph1</p>
+    </div>
+    <button id="add">ADD PARAGRAPH</button>
+    <button id="remove">REMOVE PARAGRAPH</button>
+    <script>
+        $(document).ready(function(){
+            $("#add").click(function(){
+                $("#container").append('<p>new paragraph</p>');
+            });
+            $("#remove").click(function(){
+                $("#container p:last").remove();
+            });
+        });
+    </script>
+
+    <br><br>
+    <button id="app">append</button>
+    <button id="pre">prepend</button>
+    <button id="aft">after</button>
+    <button id="bfr">before</button>
+    <br><br>
+    <p id="wel" style="color: blue;">welcome</p>
+    
+
+    <script>
+        $(document).ready(function(){
+            $("#app").click(function(){
+                $("#wel").append(" hello<br>");
+            });
+            $("#pre").click(function(){
+                $("#wel").prepend("hello ");
+            });
+            $("#aft").click(function(){
+                $("#wel").after("hello<br>");
+            });
+            $("#bfr").click(function(){
+                $("#wel").before("hello<br>");
+            });
+        });
+    </script>
+
+</body>
+</html>
