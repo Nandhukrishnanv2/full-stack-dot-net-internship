@@ -61,7 +61,7 @@
             font-family:'Times New Roman', Times, serif;
             
         }
-        .bt1{
+        #bt1{
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             font-weight: lighter;
             position: absolute;
@@ -72,17 +72,17 @@
             padding-bottom: 2%;
             padding-top: 2%;
             border-radius: 15px;
-            background-color: #222;
-            color: #00e4f5;
+            background-color: #000000;
+            color: #6d6d6d;
             border: none;
             font-size: 22px;
             letter-spacing:1.5px;
             font-weight: bold;
-            box-shadow: 0 0 10px #ffffff, 0 0 20px #008E97, 0 0 30px #008E97;
+            box-shadow: 0 0 10px #ffffff, 0 0 20px #9999998e, 0 0 30px #00000093;
         }
-        .bt1:hover{
+        #bt1:hover{
             color: #ffffff;
-            box-shadow: 0 0 10px #ffffff, 0 0 20px #00e727, 0 0 30px #00e727;
+            box-shadow: 0 0 10px #ffffff, 0 0 20px #d8d8d8, 0 0 30px #dddddd;
         }
         
         
@@ -90,7 +90,7 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light ">
         
   <a class="navbar-brand" href="#" style="color: rgb(255, 255, 255);font-family:fantasy;font-size: xx-large;">CR7</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -126,7 +126,34 @@
     <h3 class="h3-1" >Hello My Name is</h3>
     <h1 class="h1-1">Cristiano Ronaldo</h1>
     <h4 class="h4-1">-Portuguese professional footballer</h4>
-    <button class="bt1">know more</button>
+    <button type="button" data-bs-toggle="modal" data-bs-target="#myModal" class="btn btn-primary" id="bt1">know more</button>
+    <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <!-- modal header -->
+             <div class="modal-header">
+                <h4 class="modal-title">Cristiano Ronaldo dos Santos Aveiro</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <!-- modal body -->
+             <div class="modal-body">
+                <p>Cristiano Ronaldo, born on February 5, 1985, in Funchal, Madeira, Portugal, is a legendary football forward known for his extraordinary skills, numerous accolades, and record-breaking goal-scoring prowess.
+                <p>Cristiano Ronaldo dos Santos Aveiro was born to Maria Dolores dos Santos Aveiro and José Dinis Aveiro. He has one older brother, Hugo, and two older sisters, Elma and Liliana Cátia. His name was inspired by former U.S. President Ronald Reagan, who was his father's favorite actor. Ronaldo showed an early interest in football and began playing for local clubs, eventually joining the youth team of Sporting Clube de Portugal.
+                </p>
+                <p>Professional Career
+                Sporting CP (2002): Ronaldo made his professional debut with Sporting CP, where he quickly gained attention for his talent.
+                Manchester United (2003-2009): He signed with Manchester United, where he became a global superstar, winning three Premier League titles and the UEFA Champions League in 2008. He also won his first Ballon d'Or in 2008.
+                Real Madrid (2009-2018): Ronaldo transferred to Real Madrid for a then-world record fee. During his time there, he became the club's all-time leading scorer, winning four Champions League titles and multiple individual awards, including four more Ballon d'Ors.
+                Juventus (2018-2021): He continued his success in Italy, winning two Serie A titles and further enhancing his legacy.
+                Return to Manchester United (2021-2022): Ronaldo returned to Manchester United, where he continued to break records and contribute significantly to the team's performance.
+                Al Nassr (2023-Present): As of 2023, he plays for Al Nassr in Saudi Arabia, continuing to showcase his skills on the pitch.</p>
+                </div>
+             <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">close</button>
+             </div>
+        </div>
+    </div>
+ </div>
     <img src="wp11082388-cristiano-ronaldo-style-wallpapers.jpg" alt="" class="img1">
 </div>
 

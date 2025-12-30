@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>navbar</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+        
+    </head>
+    
+    <body data-bs-spy="scroll" data-bs-target="#myNav">
+        <nav class="navbar bg-dark p-3 fixed-top" id="myNav">
+        <a class="navbar-brand " href="#" style="color: blanchedalmond;">SPOT</a>
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="#home" class="nav-link">home</a></li>
+            <li class="nav-item"><a href="#service" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link">about us</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">contact</a></li>
+        </ul>
+    </nav>
+<div id="container">
+    <!-- <div id="home" class="container mt-5" style="height: 700px; padding-top: 250px;">
+        <h1>WELCOME TO HOME</h1>
+        <P>this is a bootstap navbar example with active link highlighting</P>
+    </div>
+    <div id="service" class="container mt-5" style="height: 400px;">
+        <h1>OUR SERVICES</h1>
+        <P>this is a bootstap navbar example with active link highlighting</P>
+    </div>
+    <div id="about" class="container mt-5" style="height: 400px;">
+        <h1>ABOUT US</h1>
+        <P>this is a bootstap navbar example with active link highlighting</P>
+    </div>
+    <div id="contact" class="container mt-5" style="height: 400px;">
+        <h1>CONTACT US</h1>
+        <P>this is a bootstap navbar example with active link highlighting</P>
+    </div>
+</div>   
+<div class="container mt-3" >
+    <h1>popover bottons</h1>
+    <button id="myBtn" class="btn btn-info" style="margin-right: 100px;">CLICK ME</button>
+    <button id="myBtn2" class="btn btn-info">HOVER ME</button>
+
+</div>
+    
+<script>
+    var btn = document.getElementById("myBtn")
+    new bootstrap.Popover(btn, {
+        title:"js popover",
+        content:"this popover is created using js",
+        trigger:"click"
+    });
+
+     var btn2 = document.getElementById("myBtn2")
+    new bootstrap.Popover(btn2, {
+        title:"js popover",
+        content:"this popover is created using js",
+        trigger:"hover"
+    });
+</script> -->
+
+
+<div class="container mt-3">
+    <h1>MODAL</h1>
+    <h3>modal 123</h3>
+    <p>click on the button to open the modal</p>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">OPEN MODAL</button>
+
+</div>
+
+<!-- the modal -->
+ <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <!-- modal header -->
+             <div class="modal-header">
+                <h4 class="modal-title">Modal heading</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <!-- modal body -->
+             <div class="modal-body">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod dolores repellat accusantium reiciendis odit,
+                     quaerat adipisci voluptate facere quos est veritatis,
+                     officia explicabo? Consequatur porro accusamus architecto quod quo reiciendis
+                </p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod dolores repellat accusantium reiciendis odit,
+                     quaerat adipisci voluptate facere quos est veritatis,
+                     officia explicabo? Consequatur porro accusamus architecto quod quo reiciendis!
+                </p>
+             </div>
+             <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">close</button>
+             </div>
+        </div>
+    </div>
+ </div>
+    
+
+<script src="/bootstrap/js/bootstrap.js"></script>
+</body>
+
+</html>
