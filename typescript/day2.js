@@ -1,5 +1,7 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 // push function
-var mark = [10, 55, 74, 99, "hii"];
+let mark = [10, 55, 74, 99, "hii"];
 console.log(mark);
 mark.push("hello");
 console.log(mark);
@@ -7,7 +9,7 @@ mark.push(15); //add values to the end
 console.log(mark);
 //-------------------------
 //initial array
-var marks = [10, 25, 11, 18];
+let marks = [10, 25, 11, 18];
 marks.push(24);
 console.log("original marks :", marks);
 //----------------------------
@@ -34,17 +36,17 @@ console.log("length of the array :", marks.length);
 console.log("index of 18 :", marks.indexOf(18));
 // ----------------------------------
 // includes()
-// console.log("includes 11?",marks.includes(11));
-// console.log("includes 100?",marks.includes(100));
+console.log("includes 11?", marks.includes(11));
+console.log("includes 100?", marks.includes(100));
 // --------------------------------------
 // slice() does not change the original array
-var slicedMark = marks.slice(1, 4);
+let slicedMark = marks.slice(1, 4);
 console.log("slice (1,4):", slicedMark);
 console.log("after slice (original):", marks);
 //--------------------------------
 //concat()
-var extraMarks = [7, 8];
-var combined = marks.concat(extraMarks);
+let extraMarks = [7, 8];
+let combined = marks.concat(extraMarks);
 console.log("after concat :", combined);
 //--------------------------------
 //join
@@ -55,34 +57,34 @@ marks.reverse();
 console.log("after sort :", marks);
 //-------------------------------------
 //sort()
-marks.sort(function (a, b) { return a - b; });
+marks.sort((a, b) => a - b);
 console.log("After sort:", marks);
 //-------------------------------------
 //for loop
 console.log("using for-loop");
-for (var i = 0; i < marks.length; i++) {
+for (let i = 0; i < marks.length; i++) {
     console.log(marks[i]);
 }
 // ---------------------------------
 // for---of loop
 console.log("using for-of");
-for (var _i = 0, marks_1 = marks; _i < marks_1.length; _i++) {
-    var m = marks_1[_i];
+for (let m of marks) {
     console.log(m);
 }
 // ------------------------------
 // forEach()
 console.log("using for each");
-marks.forEach(function (m) { return console.log(m); });
+marks.forEach((m) => console.log(m));
 // ------------------------
 // map()
-var doubled = marks.map(function (m) { return m * 2; });
+let doubled = marks.map(m => m * 2);
 console.log("after map(doubled)", doubled);
 // -----------------------------
 // filter()
-var filtered = marks.filter(function (m) { return m >= 15; });
+let filtered = marks.filter(m => m >= 15);
 console.log("after filtering(filtered)", filtered);
 // ------------------------------
 // reduce()
-var total = marks.reduce(function (sum, m) { return sum + m; }, 0);
+let total = marks.reduce((sum, m) => sum + m, 0);
 console.log("total using reduce :", total);
+//# sourceMappingURL=day2.js.map

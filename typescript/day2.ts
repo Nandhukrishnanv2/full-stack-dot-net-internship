@@ -37,8 +37,8 @@ console.log("index of 18 :",marks.indexOf(18));
 // ----------------------------------
 // includes()
 
-// console.log("includes 11?",marks.includes(11));
-// console.log("includes 100?",marks.includes(100));
+console.log("includes 11?",marks.includes(11));
+console.log("includes 100?",marks.includes(100));
 
 // --------------------------------------
 // slice() does not change the original array

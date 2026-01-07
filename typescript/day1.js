@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 console.log("this is a new typescript file");
 // datatypes in typescript
 // Number
@@ -7,23 +9,24 @@ console.log("this is a new typescript file");
 // unknown (same as any but check the type during writing the code)
 // null 
 // undefined 
-var a = 20;
+let a = 20;
 console.log(a);
-var b = "hellow";
+let b = "hellow";
 console.log(b);
 //any 
-var c = "hello";
+let c = "hello";
 c = 100;
 c = "hai";
 console.log(c);
 // unknown
-var d = "hai i am jithin";
+let d = "hai i am jithin";
 d = 10;
 console.log(d);
 // undefined
-var e;
+let e;
 console.log(e);
 //null
-var f = null;
+let f = null;
 console.log(f);
 // implicit and ......... typecast
+//# sourceMappingURL=day1.js.map
